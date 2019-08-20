@@ -44,8 +44,12 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<link rel="stylesheet" href="Calculate.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
+	<script src="Calculate.js"></script>
+
+
 	<!-- FOR IE9 below -->
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
@@ -54,47 +58,116 @@
 	</head>
 	<body>
 		
+
 	<div class="gtco-loader"></div>
+
+	
+	
 	
 	<div id="page">
-	<nav class="gtco-nav" role="navigation">
+	<nav class="gtco-nav">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">Inno<em>Map</em></a></div>
+					<div id="gtco-logo"><a href="index.html">Inno<em>Calculate</em></a></div>
 				</div>
-				<div class="col-xs-10 text-right menu-1 main-nav">
+				
+					<br></br>
+
+					<!--
 					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<!--<li><a href="#" data-nav-section="practice-areas">Practice Areas</a></li>-->
-						<li><a href="#" data-nav-section="our-team">Our Team</a></li>
-						<li class="btn-cta"><a href="#" data-nav-section="contact"><span>Sign In</span></a></li>
-						<!-- For external page link -->
-						<!-- <li><a href="http://freehtml5.co/" class="external">External</a></li> -->
+						<li class="btn-cta"><a> <span><input type="text" id='result' readonly></span></a></li> <br></br>
+					</ul>-->
+
+
+
+					<ul>
+						<li><a> <span class = "Ans"><input type="text" id='result' readonly></span></a></li> <br></br>
 					</ul>
+
+
+					<ul>
+						
+
+						
+
+
+						<li onclick="showresult(1)" class="btn-cta"><a id = "bottom"><span>%</span></a></li>
+						<li onclick="showresult(2)" class="btn-cta"><a id = "bottom"><span>CE</span></a></li>
+						<li onclick="showresult(3)" class="btn-cta"><a id = "bottom"><span>C</span></a></li>
+						<li onclick="showresult(4)" class="btn-cta"><a id = "bottom"><span>DEL</span></a></li>
+						<li onclick="showresult(5)" class="btn-cta"><a id = "bottom"><span>÷</span></a></li> <br></br>
+
+
+						<li onclick="showresult(6)" class="btn-cta"><a id = "bottom"><span>√</span></a></li>
+						<li onclick="showresult(7)" class="btn-cta"><a id = "bottom"><span>7</span></a></li>
+						<li onclick="showresult(8)" class="btn-cta"><a id = "bottom"><span>8</span></a></li>
+						<li onclick="showresult(9)" class="btn-cta"><a id = "bottom"><span>9</span></a></li>
+						<li onclick="showresult(10)" class="btn-cta"><a id = "bottom"><span>×</span></a></li> <br></br>
+
+
+						<li onclick="showresult(11)" class="btn-cta"><a id = "bottom"><span>x&sup2;</span></a></li>
+						<li onclick="showresult(12)" class="btn-cta"><a id = "bottom"><span>4</span></a></li>
+						<li onclick="showresult(13)" class="btn-cta"><a id = "bottom"><span>5</span></a></li>
+						<li onclick="showresult(14)" class="btn-cta"><a id = "bottom"><span>6</span></a></li>
+						<li onclick="showresult(15)" class="btn-cta"><a id = "bottom"><span>-</span></a></li> <br></br>
+
+
+						<li onclick="showresult(16)" class="btn-cta"><a id = "bottom"><span>x&sup3;</span></a></li>
+						<li onclick="showresult(17)" class="btn-cta"><a id = "bottom"><span>1</span></a></li>
+						<li onclick="showresult(18)" class="btn-cta"><a id = "bottom"><span>2</span></a></li>
+						<li onclick="showresult(19)" class="btn-cta"><a id = "bottom"><span>3</span></a></li>
+						<li onclick="showresult(20)" class="btn-cta"><a id = "bottom"><span>+</span></a></li> <br></br>
+
+
+						<li onclick="showresult(21)" class="btn-cta"><a id = "bottom"><span>1/x</span></a></li>
+						<li onclick="showresult(22)" class="btn-cta"><a id = "bottom"><span>&plusmn;</span></a></li>
+						<li onclick="showresult(23)" class="btn-cta"><a id = "bottom"><span>0</span></a></li>
+						<li onclick="showresult(25)" class="btn-cta"><a id = "bottom"><span>=</span></a></li>
+						
+ 
+
+
+								</ul>
+
+								
+
+							</div>
+					 	</div>
+					</div>
 				</div>
 			</div>
-			
 		</div>
 	</nav>
 
-	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/24.jpg);"  data-section="home"  data-stellar-background-ratio="0.5">
+
+
+	<section id="gtco-hero" class="gtco-cover" style="background-image: url(images/24.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0 text-center">
 					<div class="display-t">
 						<div class="display-tc">
+							
+
+							<!--
 							<h1 class="animate-box" data-animate-effect="fadeIn">Welcome To IM</h1>
 							<p class="gtco-video-link animate-box" data-animate-effect="fadeIn"><a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-controller-play"></i></a></p>
+
+
+						
+
+-->
+
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
+	<!--
 	<section id="gtco-about" data-section="about">
 		<div class="container">
 			<div class="row row-pb-md">
@@ -253,7 +326,7 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
-	
+	-->
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
