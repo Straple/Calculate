@@ -1,29 +1,28 @@
-
-
-let G = document.getElementById('result') // считывает текст из ответа
-	, LastG ,
+let G  // считывает текст из ответа
+	, LastG
+	 ,Ans,
 	 S;
 
-G.innerText = "0";
+G = "";
 
 
 function showresult(choise)
 {
 	let C = choise;
 	
-	if(C == 1) // %
+	if(C == 1) //%
 	{
 		LastG = G;
-		G 	  = "0";
+		G 	  = "";
 		S 	  = '%';
 	}
 	else if(C == 2) // CE
 	{
-		G = "0";
+		G = "";
 	}
 	else if(C == 3) // C
 	{
-		G = LastG = S = "0";
+		G = LastG = S = "";
 	}
 	else if(C == 4) // del
 	{
@@ -33,7 +32,7 @@ function showresult(choise)
 	else if(C == 5) // /
 	{
 		LastG = G;
-		G	  = "0";
+		G	  = "";
 		S 	  = '/';
 	}
 	else if(C == 6) // V
@@ -55,7 +54,7 @@ function showresult(choise)
 	else if(C == 10) // *
 	{
 		LastG = G;
-		G = "0";
+		G = "";
 		S = '*';
 	}
 	else if(C == 11) // ^2
@@ -77,7 +76,7 @@ function showresult(choise)
 	else if(C == 15) // -
 	{
 		LastG = G;
-		G = "0";
+		G = "";
 		S = '-';
 	}
 	else if(C == 16) //^3
@@ -99,7 +98,7 @@ function showresult(choise)
 	else if(C == 20) // +
 	{
 		LastG = G;
-		G = "0";
+		G = "";
 		S = '+';
 	}
 	else if(C == 21) // 1 / x
@@ -142,7 +141,22 @@ function showresult(choise)
 		}
 		LastG = S = "";
 	}
-	
-	document.getElementById('result').value = Number(G);
 
+	Ans = Number(G);
+
+	if(Ans == Infinity)
+	{
+		Ans = "∞";
+	}
+	
+	
+	document.getElementById('result').value = Ans;
+
+}
+
+
+input.oninput= function In()
+{
+	let Q = document.getElementById('result');
+	showresult(Q[Q.length] );
 }
