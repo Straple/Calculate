@@ -1,162 +1,160 @@
 let G  // считывает текст из ответа
 	, LastG
-	 ,Ans,
-	 S;
+	,A
+	 ,S;
 
-G = "";
+G = "0";
 
-
-function showresult(choise)
+function digit(D) 
 {
-	let C = choise;
+	G += String(D);
+
+	Out();
+}
+
+
+function operator(O) 
+{
+	LastG = G;
+	G 	  = "0";
+	S 	  = String(O);
+
+	Out();
+}
+
+function Del(B) 
+{
+	G = "0";
+	if(B === true)
+	{
+		LastG = S = "0";
+	}
+
+	Out();
+}
+
+function fact() 
+{
+	let Q = Number(G) , k;
+
+	k = 1;
+
+	while(Q > 0)
+	{
+		k *= Q;
+		Q--;
+		if(k == Infinity)
+		{
+			break;
+		}
+	}
+	G = k;
+
+	Out();
+}
+
+function D() 
+{
+	G = String( Number(G) );
+
+	G = G.substr(0, G.length - 1);
+
+	Out();
+}
+
+function Pow(N) 
+{
+	G = Math.pow(Number(G) , N);
+
+	Out();
+}
+
+function Abs()
+{
+	G = String( Math.abs(Number(G)) );
+
+	Out();
+}
+
+function qrt(B)
+{
+	if(B === true)
+	{
+		G = Math.sqrt(Number(G));	
+	}
+	else
+	{
+		G = Math.cbrt(Number(G));
+	}
 	
-	if(C == 1) //%
-	{
-		LastG = G;
-		G 	  = "";
-		S 	  = '%';
-	}
-	else if(C == 2) // CE
-	{
-		G = "";
-	}
-	else if(C == 3) // C
-	{
-		G = LastG = S = "";
-	}
-	else if(C == 4) // del
-	{
-		G -= G % 10;
-		G /= 10;
-	}
-	else if(C == 5) // /
-	{
-		LastG = G;
-		G	  = "";
-		S 	  = '/';
-	}
-	else if(C == 6) // V
-	{
-		G = Math.sqrt(Number(G));
-	}
-	else if(C == 7) // 7
-	{
-		G += "7";
-	}
-	else if(C == 8) // 8
-	{
-		G += "8";
-	}
-	else if(C == 9) // 9
-	{
-		G += "9";
-	}
-	else if(C == 10) // *
-	{
-		LastG = G;
-		G = "";
-		S = '*';
-	}
-	else if(C == 11) // ^2
-	{
-		G =String(Number(G) * Number(G));
-	}
-	else if(C == 12) // 4
-	{
-		G += "4";
-	}
-	else if(C == 13) // 5
-	{
-		G += "5";
-	}
-	else if(C == 14) // 6
-	{
-		G += "6"
-	}
-	else if(C == 15) // -
-	{
-		LastG = G;
-		G = "";
-		S = '-';
-	}
-	else if(C == 16) //^3
-	{
-		G =String(Number(G) * Number(G) * Number(G));
-	}
-	else if(C == 17) // 1
-	{
-		G += "1";
-	}
-	else if(C == 18) // 2
-	{
-		G += "2";
-	}
-	else if(C == 19) // 3
-	{
-		G += "3";
-	}
-	else if(C == 20) // +
-	{
-		LastG = G;
-		G = "";
-		S = '+';
-	}
-	else if(C == 21) // 1 / x
-	{
-		G = String(1 / Number(G));
-	}
-	else if(C == 22) // +-
-	{
-		G = String(Number(G) * (-1));
-	}
-	else if(C == 23) // 0
-	{
-		G += "0";
-	}
-	else if(C == 24) // ,
-	{
-		G += "."
-	}
-	else // =
-	{
+	Out();
+}
+
+function Drob()
+{
+	G = 1 / Number(G);
+	Out();
+}
+
+function Plusm() 
+{
+	G = Number(G) * (-1);
+	Out();
+}
+
+function Touch()
+{
+	G += "."
+	Out();
+}
+
+
+
+function Res()
+{
+	
+
 		if(S == '+')
 		{
-			G = String(Number(G) + Number(LastG));
+			G = Number(LastG) + Number(G);
 		}
 		else if(S == '-')
 		{
-			G = String(Number(LastG) - Number(G));
+			G = Number(LastG) - Number(G);
 		}
 		else if(S == '*')
 		{
-			G = String(Number(G) * Number(LastG));
+			G = Number(LastG) * Number(G);
 		}
 		else if(S == '%')
 		{
-			G = String(Number(LastG) % Number(G));
+			G = Number(LastG) % Number(G);
 		}
 		else if(S == '/')
 		{
-			G = String(Number(LastG) / Number(G));
+			G = Number(LastG) / Number(G);
+		}
+		else if(S == 'P')
+		{
+			G = Math.pow(Number(LastG) , Number(G));
+
 		}
 		LastG = S = "";
-	}
 
-	Ans = Number(G);
+	
 
-	if(Ans == Infinity)
-	{
-		Ans = "∞";
-	}
-	
-	
-	document.getElementById('result').value = Ans;
+	Out();
 
 }
 
 
-input.oninput= function In()
+function Out() 
 {
-	let Q = document.getElementById('result');
-	showresult(Q[Q.length] );
+	A = Number(G);
+	if(A == Infinity)
+	{
+		A = "∞";
+	}
+
+	document.getElementById('result').value = A;
 }
