@@ -1,9 +1,20 @@
+body
+{
+    user-select: none;
+    overflow: hidden;
+}
+
+
+#Calc
+{
+  margin-left:284px;
+  margin-top:100px;
+}
+
 .Ans
 {
 	border: none !important;
   background: rgba(255, 255, 255, 0.2);
-  /*padding: 4px 50px;*/
-
 
   line-height: 3em;
 
