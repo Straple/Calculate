@@ -7,7 +7,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>InnoMap &mdash; 	New Generation Maps </title>
+	<title>InnoCalculate</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="New Generation Maps" />
 	<meta name="keywords" content="innomap, innopolis, new generation map, maps" />
@@ -48,15 +48,13 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<script src="Calculate.js"></script>
-
+	<script src="Convert.js"></script>
 
 	</head>
 	<body>
 		
 
 	<div class="gtco-loader"></div>
-
-	
 	
 	
 	<div id="page">
@@ -70,44 +68,92 @@
 					<br></br>
 
 
+
+
+					<ul class = "Convert">
+
+
+			<li><a> <span class = "Con"><input id ="IFeet" type="number" placeholder="Feet" oninput="Convert('F',this.value)"></span></a></li>
+
+			<li><a id = "Feet"></a></li> <br></br>
+
+
+			<li><a> <span class = "Con"><input id="IMeters" type="number" placeholder="Meters" oninput="Convert('M',this.value)"></span></a></li>
+
+			<li><a id = "Meters"></a></li> <br></br>
+
+
+			<li><a> <span class = "Con"><input id="IInches" type="number" placeholder="Inches" oninput="Convert('I',this.value)"></span></a></li>
+
+			<li><a id = "Inches"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="ICm" type="number" placeholder="Cm" oninput="Convert('Cm',this.value)"></span></a></li>
+
+			<li><a id = "Cm"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IYards" type="number" placeholder="Yards" oninput="Convert('Yards',this.value)"></span></a></li>
+
+			<li><a id = "Yards"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IKm" type="number" placeholder="Km" oninput="Convert('Km',this.value)"></span></a></li>
+
+			<li><a id = "Km"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IMil" type="number" placeholder="Mil" oninput="Convert('Mil',this.value)"></span></a></li>
+
+			<li><a id = "Mil"></a></li> <br></br>
+
+
+					</ul>
+
+
+
+
 					<ul id = "Calc">
 
-			 			
-						<li onclick="Res()"><a> <span class = "Ans"><input type="text" id='result'></span></a></li> <br></br>
 
-						<li onclick="showresult(1)" class="btn-cta"><a id = "bottom"><span>%</span></a></li>
-						<li onclick="showresult(2)" class="btn-cta"><a id = "bottom"><span>CE</span></a></li>
-						<li onclick="showresult(3)" class="btn-cta"><a id = "bottom"><span>C</span></a></li>
-						<li onclick="showresult(4)" class="btn-cta"><a id = "bottom"><span>DEL</span></a></li>
-						<li onclick="showresult(5)" class="btn-cta"><a id = "bottom"><span>÷</span></a></li> <br></br>
+						<li><a> <span class = "Ans"><input type="text" id='result' readonly></input></span></a></li> <br></br>
 
 
-						<li onclick="showresult(6)" class="btn-cta"><a id = "bottom"><span>√</span></a></li>
-						<li onclick="showresult(7)" class="btn-cta"><a id = "bottom"><span>7</span></a></li>
-						<li onclick="showresult(8)" class="btn-cta"><a id = "bottom"><span>8</span></a></li>
-						<li onclick="showresult(9)" class="btn-cta"><a id = "bottom"><span>9</span></a></li>
-						<li onclick="showresult(10)" class="btn-cta"><a id = "bottom"><span>×</span></a></li> <br></br>
+
+						
+						<li onclick="operator('%')" class="btn-cta"><a id = "bottom"><span>%</span></a></li>
+						<li onclick="Del(false)" class="btn-cta"><a id = "bottom"><span>CE</span></a></li>
+						<li onclick="Del(true)" class="btn-cta"><a id = "bottom"><span>C</span></a></li>
+						<li onclick="D()" class="btn-cta"><a id = "bottom"><span>←</span></a></li>
+						<li onclick="operator('/')" class="btn-cta"><a id = "bottom"><span>÷</span></a></li> <br></br>
+
+						<li onclick="qrt(true)" class="btn-cta"><a id = "bottom"><span>√</span></a></li>
+						<li onclick="digit(7)" class="btn-cta"><a id = "bottom"><span>7</span></a></li>
+						<li onclick="digit(8)" class="btn-cta"><a id = "bottom"><span>8</span></a></li>
+						<li onclick="digit(9)" class="btn-cta"><a id = "bottom"><span>9</span></a></li>
+						<li onclick="operator('*')" class="btn-cta"><a id = "bottom"><span>×</span></a></li> <br></br>
+
+						<li onclick="Pow(2)" class="btn-cta"><a id = "bottom"><span>x&sup2;</span></a></li>
+						<li onclick="digit(4)" class="btn-cta"><a id = "bottom"><span>4</span></a></li>
+						<li onclick="digit(5)" class="btn-cta"><a id = "bottom"><span>5</span></a></li>
+						<li onclick="digit(6)" class="btn-cta"><a id = "bottom"><span>6</span></a></li>
+						<li onclick="operator('-')" class="btn-cta"><a id = "bottom"><span>-</span></a></li> <br></br>
 
 
-						<li onclick="showresult(11)" class="btn-cta"><a id = "bottom"><span>x&sup2;</span></a></li>
-						<li onclick="showresult(12)" class="btn-cta"><a id = "bottom"><span>4</span></a></li>
-						<li onclick="showresult(13)" class="btn-cta"><a id = "bottom"><span>5</span></a></li>
-						<li onclick="showresult(14)" class="btn-cta"><a id = "bottom"><span>6</span></a></li>
-						<li onclick="showresult(15)" class="btn-cta"><a id = "bottom"><span>-</span></a></li> <br></br>
+						<li onclick="Pow(3)" class="btn-cta"><a id = "bottom"><span>x&sup3;</span></a></li>
+						<li onclick="digit(1)" class="btn-cta"><a id = "bottom"><span>1</span></a></li>
+						<li onclick="digit(2)" class="btn-cta"><a id = "bottom"><span>2</span></a></li>
+						<li onclick="digit(3)" class="btn-cta"><a id = "bottom"><span>3</span></a></li>
+						<li onclick="operator('+')" class="btn-cta"><a id = "bottom"><span>+</span></a></li> <br></br>
 
 
-						<li onclick="showresult(16)" class="btn-cta"><a id = "bottom"><span>x&sup3;</span></a></li>
-						<li onclick="showresult(17)" class="btn-cta"><a id = "bottom"><span>1</span></a></li>
-						<li onclick="showresult(18)" class="btn-cta"><a id = "bottom"><span>2</span></a></li>
-						<li onclick="showresult(19)" class="btn-cta"><a id = "bottom"><span>3</span></a></li>
-						<li onclick="showresult(20)" class="btn-cta"><a id = "bottom"><span>+</span></a></li> <br></br>
+						<li onclick="Drob()" class="btn-cta"><a id = "bottom"><span>1/x</span></a></li>
+						<li onclick="Plusm()" class="btn-cta"><a id = "bottom"><span>&plusmn;</span></a></li>
+						<li onclick="digit(0)" class="btn-cta"><a id = "bottom"><span>0</span></a></li>
+						<li onclick="Touch()" class="btn-cta"><a id = "bottom"><span>,</span></a></li>
+						<li onclick="Res()" class="btn-cta"><a id = "bottom"><span>=</span></a></li> <br></br>
 
 
-						<li onclick="showresult(21)" class="btn-cta"><a id = "bottom"><span>1/x</span></a></li>
-						<li onclick="showresult(22)" class="btn-cta"><a id = "bottom"><span>&plusmn;</span></a></li>
-						<li onclick="showresult(23)" class="btn-cta"><a id = "bottom"><span>0</span></a></li>
-						<li onclick="showresult(24)" class="btn-cta"><a id = "bottom"><span>,</span></a></li>
-						<li onclick="showresult(25)" class="btn-cta"><a id = "bottom"><span>=</span></a></li>
+						<li onclick="qrt(false)" class="btn-cta"><a id = "bottom"><span>∛</span></a></li>
+						<li onclick="Abs()" class="btn-cta"><a id = "bottom"><span>|x|</span></a></li>
+						<li onclick="fact()" class="btn-cta"><a id = "bottom"><span>n!</span></a></li>
+						<li onclick="operator('P')" class="btn-cta"><a id = "bottom"><span>x<sup>n</sup></span></a></li>
 						
  
 
@@ -123,6 +169,9 @@
 			</div>
 		</div>
 	</nav>
+
+
+
 
 
 
