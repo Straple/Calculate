@@ -1,6 +1,6 @@
 
 
-function Convert(Type,valNum) 
+function ConvertLength(Type,valNum) 
 {
 	if(Type == 'F')
 	{
@@ -71,6 +71,53 @@ function Convert(Type,valNum)
 		document.getElementById("Yards").innerHTML=Number(valNum *1760);
 		document.getElementById("Km").innerHTML=Number(valNum /0.62137);
 		document.getElementById("Mil").innerHTML=Number(valNum);
+	}
+  
+}
+
+
+
+function ConvertWeight(Type,valNum) 
+{
+	if(Type == 'Pounds')
+	{
+		document.getElementById("Pounds").innerText = Number(valNum);
+		document.getElementById("Kg").innerText = Number(valNum /2.2046);
+		document.getElementById("Ounces").innerText = Number(valNum *16);		
+		document.getElementById("Grams").innerHTML=Number(valNum/0.0022046);
+		document.getElementById("Stones").innerHTML=Number(valNum*0.071429);
+	}
+	else if(Type == 'Kg')
+	{
+		document.getElementById("Pounds").innerText = Number(valNum *2.2046);
+		document.getElementById("Kg").innerText = Number(valNum);
+		document.getElementById("Ounces").innerText = Number(valNum *35.274);		
+		document.getElementById("Grams").innerHTML=Number(valNum*1000);
+		document.getElementById("Stones").innerHTML=Number(valNum*0.1574);
+	}
+	else if(Type == 'Ounces')
+	{
+		document.getElementById("Pounds").innerText = Number(valNum *0.0625);
+		document.getElementById("Kg").innerText = Number(valNum /35.274);
+		document.getElementById("Ounces").innerText = Number(valNum);		
+		document.getElementById("Grams").innerHTML=Number(valNum/0.035274);
+		document.getElementById("Stones").innerHTML=Number(valNum*0.0044643);
+	}
+	else if(Type == 'Grams')
+	{
+		document.getElementById("Pounds").innerText = Number(valNum*0.0022046);
+		document.getElementById("Kg").innerText = Number(valNum /1000);
+		document.getElementById("Ounces").innerText = Number(valNum*0.035274);		
+		document.getElementById("Grams").innerHTML=Number(valNum);
+		document.getElementById("Stones").innerHTML=Number(valNum*0.00015747);
+	}
+	else if(Type == 'Stones')
+	{
+		document.getElementById("Pounds").innerText = Number(valNum *14);
+		document.getElementById("Kg").innerText = Number(valNum /0.15747);
+		document.getElementById("Ounces").innerText = Number(valNum *224);		
+		document.getElementById("Grams").innerHTML=Number(valNum/0.00015747);
+		document.getElementById("Stones").innerHTML=Number(valNum);
 	}
   
 }
