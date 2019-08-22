@@ -76,39 +76,39 @@
 
 
 
-					<ul><li onclick="viewDiv();" class="btn-cta"><a><span  id = "Conlength">Length</span></a></li> <br></br>	</ul>
+					<ul><li onclick="viewDiv('Convert');" class="btn-cta"><a><span  id = "Conlength">Length</span></a></li> <br></br>	</ul>
 
 
 					<ul id = "Convert">
 			
 
-			<li><a> <span class = "Con"><input id ="IFeet" type="number" placeholder="Feet" oninput="Convert('F',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input  id ="IFeet" type="number" placeholder="Feet" oninput="ConvertLength('F',this.value)"></span></a></li>
 
 			<li><a id = "Feet"></a></li> <br></br>
 
 
-			<li><a> <span class = "Con"><input id="IMeters" type="number" placeholder="Meters" oninput="Convert('M',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input id="IMeters" type="number" placeholder="Meters" oninput="ConvertLength('M',this.value)"></span></a></li>
 
 			<li><a id = "Meters"></a></li> <br></br>
 
 
-			<li><a> <span class = "Con"><input id="IInches" type="number" placeholder="Inches" oninput="Convert('I',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input id="IInches" type="number" placeholder="Inches" oninput="ConvertLength('I',this.value)"></span></a></li>
 
 			<li><a id = "Inches"></a></li> <br></br>
 
-			<li><a> <span class = "Con"><input id="ICm" type="number" placeholder="Cm" oninput="Convert('Cm',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input id="ICm" type="number" placeholder="Cm" oninput="ConvertLength('Cm',this.value)"></span></a></li>
 
 			<li><a id = "Cm"></a></li> <br></br>
 
-			<li><a> <span class = "Con"><input id="IYards" type="number" placeholder="Yards" oninput="Convert('Yards',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input id="IYards" type="number" placeholder="Yards" oninput="ConvertLength('Yards',this.value)"></span></a></li>
 
 			<li><a id = "Yards"></a></li> <br></br>
 
-			<li><a> <span class = "Con"><input id="IKm" type="number" placeholder="Km" oninput="Convert('Km',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input id="IKm" type="number" placeholder="Km" oninput="ConvertLength('Km',this.value)"></span></a></li>
 
 			<li><a id = "Km"></a></li> <br></br>
 
-			<li><a> <span class = "Con"><input id="IMil" type="number" placeholder="Mil" oninput="Convert('Mil',this.value)"></span></a></li>
+			<li><a> <span class = "Con"><input id="IMil" type="number" placeholder="Mil" oninput="ConvertLength('Mil',this.value)"></span></a></li>
 
 			<li><a id = "Mil"></a></li> <br></br>
 
@@ -116,6 +116,80 @@
 					</ul>
 
 
+
+					<ul><li onclick="viewDiv('ConvertW');" class="btn-cta"><a><span  id = "ConWeight">Weight</span></a></li> <br></br>	</ul>
+
+
+
+				<ul id = "ConvertW">
+			
+
+			<li><a> <span class = "Con"><input id ="IPounds" type="number" placeholder="Pounds" oninput="ConvertWeight('Pounds',this.value)"></span></a></li>
+
+			<li><a id = "Pounds"></a></li> <br></br>
+
+
+			<li><a> <span class = "Con"><input id="IKg" type="number" placeholder="Kg" oninput="ConvertWeight('Kg',this.value)"></span></a></li>
+
+			<li><a id = "Kg"></a></li> <br></br>
+
+
+			<li><a> <span class = "Con"><input id="IOunces" type="number" placeholder="Ounces" oninput="ConvertWeight('Ounces',this.value)"></span></a></li>
+
+			<li><a id = "Ounces"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IGrams" type="number" placeholder="Grams" oninput="ConvertWeight('Grams',this.value)"></span></a></li>
+
+			<li><a id = "Grams"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IStones" type="number" placeholder="Stones" oninput="ConvertWeight(
+			'Stones',this.value)"></span></a></li>
+
+			<li><a id = "Stones"></a></li> <br></br>
+
+			
+			</ul>
+
+
+
+			
+<!--
+
+					<ul><li onclick="viewDiv('ConvertT');" class="btn-cta"><a><span  id = "ConTemperature">0Temperature</span></a></li> <br></br>	</ul>
+
+
+
+				<ul id = "ConvertW">
+			
+
+			<li><a> <span class = "Con"><input id ="IPounds" type="number" placeholder="Pounds" oninput="ConvertWeight('Pounds',this.value)"></span></a></li>
+
+			<li><a id = "Pounds"></a></li> <br></br>
+
+
+			<li><a> <span class = "Con"><input id="IKg" type="number" placeholder="Kg" oninput="ConvertWeight('Kg',this.value)"></span></a></li>
+
+			<li><a id = "Kg"></a></li> <br></br>
+
+
+			<li><a> <span class = "Con"><input id="IOunces" type="number" placeholder="Ounces" oninput="ConvertWeight('Ounces',this.value)"></span></a></li>
+
+			<li><a id = "Ounces"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IGrams" type="number" placeholder="Grams" oninput="ConvertWeight('Grams',this.value)"></span></a></li>
+
+			<li><a id = "Grams"></a></li> <br></br>
+
+			<li><a> <span class = "Con"><input id="IStones" type="number" placeholder="Stones" oninput="ConvertWeight(
+			'Stones',this.value)"></span></a></li>
+
+			<li><a id = "Stones"></a></li> <br></br>
+
+			
+			</ul>
+
+
+-->
 
 
 					<ul id = "Calc">
