@@ -5,6 +5,26 @@ let G  // считывает текст из ответа
 
 G = "0";
 
+
+
+function viewDiv()
+{
+	if(document.getElementById("Convert").style.display == "none")
+	{
+	 	document.getElementById("Convert").style.display= "block";
+	}
+	else
+	{
+		document.getElementById("Convert").style.display ="none";
+	}
+};
+
+
+
+
+
+
+
 function digit(D) 
 {
 	G += String(D);
