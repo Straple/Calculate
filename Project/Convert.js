@@ -2,6 +2,8 @@
 
 function ConvertLength(Type,valNum) 
 {
+
+	valNum = Number(valNum);
 	if(Type == 'F')
 	{
 		document.getElementById("Meters").innerText = Number(valNum / 3.2808);
@@ -79,6 +81,7 @@ function ConvertLength(Type,valNum)
 
 function ConvertWeight(Type,valNum) 
 {
+	valNum = Number(valNum);
 	if(Type == 'Pounds')
 	{
 		document.getElementById("Pounds").innerText = Number(valNum);
@@ -118,6 +121,31 @@ function ConvertWeight(Type,valNum)
 		document.getElementById("Ounces").innerText = Number(valNum *224);		
 		document.getElementById("Grams").innerHTML=Number(valNum/0.00015747);
 		document.getElementById("Stones").innerHTML=Number(valNum);
+	}
+  
+}
+
+
+function ConvertTemper(Type,valNum) 
+{
+	valNum = Number(valNum);
+	if(Type == 'Fahr')
+	{
+		document.getElementById("Cels").innerText = Number((valNum-32)/1.8);
+		document.getElementById("Kelvin").innerText = Number(((valNum-32)/1.8)+273.15);
+		document.getElementById("Fahr").innerText = Number(valNum);
+	}
+	else if(Type == 'Cels')
+	{
+		document.getElementById("Cels").innerText = Number(valNum );
+		document.getElementById("Kelvin").innerText = Number(valNum + 273.15);
+		document.getElementById("Fahr").innerText = Number((valNum*1.8)+32);
+	}
+	else if(Type == 'Kelvin')
+	{
+		document.getElementById("Cels").innerText = Number(valNum -273.15);
+		document.getElementById("Kelvin").innerText = Number(valNum);
+		document.getElementById("Fahr").innerText = Number(((valNum-273.15)*1.8)+32);
 	}
   
 }
