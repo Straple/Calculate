@@ -1,6 +1,6 @@
 body
 {
-    
+    overflow: hidden;
     user-select: none;
 }
 
@@ -16,7 +16,7 @@ body
     display: none;
     position: absolute;
     left:45%;
-    top:60%;
+    top:50%;
     
 }
 
@@ -25,10 +25,18 @@ body
     display: none;
     position: absolute;
     left:45%;
-    top:60%;
+    top:50%;
     
 }
 
+#ConvertT
+{
+    display: none;
+    position: absolute;
+    left:45%;
+    top:50%;
+    
+}
 
 #ConWeight
 {
@@ -120,6 +128,47 @@ body
 
 }
 
+
+
+#Fahr
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Kelvin
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Cels
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
 
 #Feet
 {
@@ -264,6 +313,53 @@ body
     width: 300px;
     font-size: 200%;
 }
+
+
+
+
+#IFahr
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+#IKelvin
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+#ICels
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+
 
 #IMil
 {
