@@ -7,15 +7,15 @@ G = "0";
 
 
 
-function viewDiv()
+function viewDiv(Type)
 {
-	if(document.getElementById("Convert").style.display == "none")
+	if(document.getElementById(Type).style.display == "none")
 	{
-	 	document.getElementById("Convert").style.display= "block";
+	 	document.getElementById(Type).style.display= "block";
 	}
 	else
 	{
-		document.getElementById("Convert").style.display ="none";
+		document.getElementById(Type).style.display ="none";
 	}
 };
 
