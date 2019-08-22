@@ -1,25 +1,40 @@
 body
 {
+    
     user-select: none;
-  /*overflow: hidden;*/
 }
 
-.Convert
+#Q
 {
+  position: absolute;
+  left:45%;
+  top:12%;
+}
+
+#Convert
+{
+    display: none;
     position: absolute;
-    left:800px;
-    top:100px;
+    left:45%;
+    top:60%;
     
 }
 
+#Conlength
+{
+  position: absolute;
+  left:60%;
+  top:12%;
+
+}
 
 
 #Calc
 {
     position: absolute;
 
-    left:0px;
-    top:100px;
+    left:0%;
+    top:50%;
 }
 
 
@@ -53,6 +68,7 @@ body
 
 .Con
 {
+
         border: none !important;
         background: rgba(255, 255, 255, 0.2);
 
