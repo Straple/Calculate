@@ -20,6 +20,32 @@ body
     
 }
 
+#ConvertW
+{
+    display: none;
+    position: absolute;
+    left:45%;
+    top:60%;
+    
+}
+
+
+#ConWeight
+{
+  position: absolute;
+  left:70%;
+  top:12%;
+
+}
+
+#ConTemperature
+{
+  position: absolute;
+  left:80%;
+  top:12%;
+
+}
+
 #Conlength
 {
   position: absolute;
@@ -96,6 +122,71 @@ body
 
 
 #Feet
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Pounds
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Kg
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Ounces
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Stones
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Grams
 {
     text-align: right;
 
@@ -188,7 +279,79 @@ body
     width: 300px;
     font-size: 200%;
 }
+#IPounds
+{
 
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+#IKg
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+
+#IOunces
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+
+#IStones
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+
+#IGrams
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
 #IKm
 {
     text-align: right;
