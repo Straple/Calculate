@@ -149,3 +149,39 @@ function ConvertTemper(Type,valNum)
 	}
   
 }
+
+
+
+function ConvertSpeed(Type,valNum) 
+{
+	valNum = Number(valNum);
+	if(Type == 'MPH')
+	{
+		document.getElementById("MPH").innerText = Number(valNum);
+		document.getElementById("KPH").innerText = Number(valNum*1.609344);
+		document.getElementById("Knots").innerText = Number(valNum / 1.150779);
+		document.getElementById("Mach").innerText = Number(valNum / 761.207);
+	}
+	else if(Type == 'KPH')
+	{
+		document.getElementById("MPH").innerText = Number(valNum /1.609344);
+		document.getElementById("KPH").innerText = Number(valNum);
+		document.getElementById("Knots").innerText = Number(valNum / 1.852);
+		document.getElementById("Mach").innerText = Number(valNum / 1225.044);
+	}
+	else if(Type == 'Knots')
+	{
+		document.getElementById("MPH").innerText = Number(valNum*1.150779);
+		document.getElementById("KPH").innerText = Number(valNum *1.852);
+		document.getElementById("Knots").innerText = Number(valNum);
+		document.getElementById("Mach").innerText = Number(valNum /661.4708);
+	}
+	else if(Type == 'Mach')
+	{
+		document.getElementById("MPH").innerText = Number(valNum*761.207);
+		document.getElementById("KPH").innerText = Number(valNum *1225.044);
+		document.getElementById("Knots").innerText = Number(valNum *661.4708);
+		document.getElementById("Mach").innerText = Number(valNum);
+	}
+  
+}
