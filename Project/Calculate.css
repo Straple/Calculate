@@ -29,6 +29,15 @@ body
     
 }
 
+#ConvertS
+{
+    display: none;
+    position: absolute;
+    left:45%;
+    top:50%;
+    
+}
+
 #ConvertT
 {
     display: none;
@@ -50,6 +59,13 @@ body
 {
   position: absolute;
   left:80%;
+  top:12%;
+
+}
+#ConSpeed
+{
+  position: absolute;
+  left:90%;
   top:12%;
 
 }
@@ -169,7 +185,58 @@ body
     width: 300px;
     font-size: 200%;
 }
+#MPH
+{
+    text-align: right;
 
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Knots
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#Mach
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
+#KPH
+{
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+    color: #fff;
+    
+    height: 40px;
+    width: 300px;
+    font-size: 200%;
+}
 #Feet
 {
     text-align: right;
@@ -359,7 +426,62 @@ body
     width: 300px;
     font-size: 200%;
 }
+#IMach
+{
 
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+#IKnots
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+#IKPH
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
+#IMPH
+{
+
+    text-align: right;
+
+    background:rgba(0 , 0 , 0 , 0);
+    border: none;
+
+
+    text-decoration-color: white;    
+    height: 60px;
+    width: 300px;
+    font-size: 200%;
+}
 
 #IMil
 {
