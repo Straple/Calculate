@@ -5,7 +5,10 @@ let G  // считывает текст из ответа
 
 G = "0";
 
-
+function start() 
+{
+	Out();
+}
 
 function viewDiv(Type)
 {
@@ -16,6 +19,31 @@ function viewDiv(Type)
 	else
 	{
 		document.getElementById(Type).style.display ="none";
+	}
+
+	if(Type == 'Convert')
+	{
+		document.getElementById('ConvertW').style.display ="none";
+		document.getElementById('ConvertT').style.display ="none";
+		document.getElementById('ConvertS').style.display ="none";	
+	}
+	else if(Type == 'ConvertW')
+	{
+		document.getElementById('Convert').style.display ="none";
+		document.getElementById('ConvertT').style.display ="none";	
+		document.getElementById('ConvertS').style.display ="none";
+	}
+	else if(Type == 'ConvertT')
+	{
+		document.getElementById('ConvertW').style.display ="none";
+		document.getElementById('ConvertS').style.display ="none";
+		document.getElementById('Convert').style.display ="none";	
+	}
+	else if(Type == 'ConvertS')
+	{
+		document.getElementById('ConvertW').style.display ="none";
+		document.getElementById('ConvertT').style.display ="none";
+		document.getElementById('Convert').style.display ="none";	
 	}
 };
 
