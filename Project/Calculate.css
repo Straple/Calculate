@@ -4,6 +4,12 @@ body
     user-select: none;
 }
 
+:active, :hover, :focus /* убирает выделение inputa */
+{
+    outline: 0;
+    outline-offset: 0;
+}
+
 #Q
 {
   position: absolute;
